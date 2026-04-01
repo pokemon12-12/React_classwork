@@ -1,0 +1,67 @@
+<div id="root"></div>
+
+<script>
+    const root=document.getElementById("root");
+    let count=0;
+    function render(){
+        console.log("calling render function",count);
+        root.innerHTML= `
+        <h1>${count}</h1>
+        <button onclick="increment()">Increase</button>
+        <button onclick="decrement()">Decrement</button>
+        <button onclick="reset()">Reset</button>
+        `;
+    }
+
+    function increment(){
+        count++;
+        render();
+        console.log("calling render");
+    }
+    render();
+
+    function decrement(){
+        count--;
+        render();
+    }
+
+    function reset(){
+        console.log("reset is called");
+        count=0;
+        render();
+    }
+
+    setInterval(()=>{
+        console.log("running setInterval")
+    },5000);
+
+    setTimeout(()=>{
+        console.log("set time is called")
+    },5000);
+
+    // set time interval use krna.   
+
+    // for(let i=1;i<=5;i++){
+
+    //     setInterval(()=>{
+    //         console.log(i);
+    //     },3000);
+    // }
+
+    //kuch error hai 
+
+
+    // let time=0;
+    // let intervalId=setInterval(()=>{
+    //     //reset
+    //     if(count>=4){
+    //         clearInterval(intervalID);
+    //     }
+    //     increment();
+    //     console.log("running setInterval")
+    // },time);
+
+    
+
+   
+</script>

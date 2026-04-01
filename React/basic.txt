@@ -1,0 +1,28 @@
+story Behind DOM Re-Rendering optimisation
+
+traditonal DOM Problem
+
+The real DOM is slow because:
+
+DOM operation trigger:
+
+layout recalculation
+
+paint 
+Reflow 
+Browser must recalculate style
+Imagine updating 1000 rows-that's expensive.
+
+React Solution: Virtual DOM
+React does NOT directly update real DOM
+
+Create virtual DOM (JS object represetation)
+compare old vs new (Diffing algorithm or Re-cancellation)
+update only changed parts
+
+React compares and updates only text node.
+Not entire page
+This is called Reconcilation.
+
+
+

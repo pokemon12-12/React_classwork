@@ -51,13 +51,13 @@
 
 //event bubbling
 
-parrent.addEventListener("click",()=>{
-    console.log("parrent clicked");
-},true);
+// parrent.addEventListener("click",()=>{
+//     console.log("parrent clicked");
+// },true);
 
-child.addEventListener("click",()=>{
- console.log("child clicked ");
-},true);
+// child.addEventListener("click",()=>{
+//  console.log("child clicked ");
+// },true);
 
 // note:Event ka propagation sequence me chalna ho toh true use krenge usko bubbling kahte hai agar nhi lgaya toh propagatin kahte hai which means child node will be executed first 
 
@@ -70,28 +70,28 @@ child.addEventListener("click",()=>{
 
 //create your own promise 
 
-let success=true;
-let mypromise= new Promise((resolve,reject)=>{
-    if(success){
-        resolve("SUCCESS")
-    }
-    else{
-        reject("FAILURE")
-    }
-})
+// let success=true;
+// let mypromise= new Promise((resolve,reject)=>{
+//     if(success){
+//         resolve("SUCCESS")
+//     }
+//     else{
+//         reject("FAILURE")
+//     }
+// })
 
-//handling promises 
+// //handling promises 
 
 
-mypromise.then(result=>{
-    console.log("result",result);
-})
-.catch(error=>{
-    console.log("error",error)
-})
-.finally(()=>{
-    console.log("completed");
-})
+// mypromise.then(result=>{
+//     console.log("result",result);
+// })
+// .catch(error=>{
+//     console.log("error",error)
+// })
+// .finally(()=>{
+//     console.log("completed");
+// })
 
 
 
