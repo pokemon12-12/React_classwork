@@ -1,0 +1,13 @@
+.GrupButton {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.keypad {
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+}

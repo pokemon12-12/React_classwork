@@ -1,0 +1,27 @@
+h1{
+  font-weight:1000;
+  font-size:40px;
+  margin:40px;
+  margin-bottom: 20px;
+}
+input{
+  width:30%;
+}
+.list-items{
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+  margin:10%;
+}
+.listItem{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  text-align: center;
+  margin:10px;
+  
+}
+.kg-button{
+  border-radius: 20px;
+  min-width:150px;
+}

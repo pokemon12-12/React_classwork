@@ -1,0 +1,17 @@
+.kg-style {
+  list-style: none;
+  background-color: khaki;
+}
+
+.kg-font {
+  font-weight: bold;
+  color: rgb(0, 89, 255);
+}
+.Buy-btn{
+  width:fit-content;
+  border-radius: 10px;
+  margin-left: 15px;
+  background-color:aquamarine;
+  float: right;
+}
+
