@@ -8,28 +8,28 @@ import { useState } from "react";
 
 function App() {
  
-  let [fooditems,setCurrentState]=useState(["Dal","Chawal","Mango","Paneer","Rasogulla"]);
+  let [fooditems,setCurrentFooditem]=useState(["Dal","Chawal","Mango","Paneer","Rasogulla"]);
  
-
-  const handleOnChange=(event)=>{
+  const OnKeyDown=(event)=>{
     if(event.key=="Enter"){
-      let newFoodItems = event.target.value;
-     let newFoodItems=[...fooditems, newFoodItems];
-     setCurrentState(newFoodItems);
-    console.log(`New food input clicked ${newFoodItems}`);
+      let newFoodItem=event.target.value;
+      let updatedFoodItem=[...fooditems,newFoodItem];  //spread operator is used.
+      setCurrentFooditem(updatedFoodItem);
+      event.target.value="";
     }
   };
+
 
   return (
     <>
     <Container>
         <h1>Healthy Food</h1>
-        <FoodInput handleOnChange={handleOnChange}></FoodInput>
+
+        <FoodInput handleOnChange={OnKeyDown}></FoodInput>
         <Errormessage itemError={fooditems}></Errormessage>
         <Fooditems itemFood={fooditems}></Fooditems>
-      </Container>
-
-      <Container><p>Here is the list of healty food items which are good for health</p></Container>
+    </Container>
+    <Container><p>Here is the list of healty food items which are good for health</p></Container>
     </>
   );   
 }
