@@ -1,4 +1,10 @@
-const ItemsTodo = ({AddItem,deleteItem}) => {
+import { useContext } from "react";
+import { TodoItemsContext } from "../Store/Todo-items-store";
+
+
+const ItemsTodo = () => {
+const {AddItem,deleteItem}=useContext(TodoItemsContext);
+
   return (
     <>
       {AddItem.map((item, index) => (
