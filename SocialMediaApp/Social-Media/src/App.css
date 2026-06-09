@@ -1,0 +1,19 @@
+.workspace{
+  display: flex;
+}
+
+.content{
+  width:100%;
+}
+
+.sidebar{
+  min-height: 800px;
+}
+.post_card{
+  margin:20px 50px;
+  border-radius: 11px;
+  background-color: beige;
+}
+.taglist{
+  margin:0px 3px; 
+}
