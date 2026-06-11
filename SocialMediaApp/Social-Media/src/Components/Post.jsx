@@ -1,9 +1,8 @@
-import { useContext } from "react"
+import { useContext } from "react";
 import { PostListContext } from "../Store/Post-List-Store";
 
 const Post = ({ post }) => {
-
-  const {DeletePost}=useContext(PostListContext);
+  const { DeletePost } = useContext(PostListContext);
 
   return (
     <div className="card post_card" style={{ width: "18rem" }}>
@@ -19,7 +18,7 @@ const Post = ({ post }) => {
               fill="currentColor"
               className="bi bi-trash-fill"
               viewBox="0 0 16 16"
-              onClick={()=>(DeletePost(post.id))}
+              onClick={() => DeletePost(post.id)}
             >
               <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
             </svg>
@@ -27,8 +26,13 @@ const Post = ({ post }) => {
         </h5>
         <p className="card-text">{post.body}</p>
         {post.tags.map((tag) => (
-          <span className="badge text-bg-primary taglist" key={tag}>{tag}</span>
+          <span className="badge text-bg-primary taglist" key={tag}>
+            {tag}
+          </span>
         ))}
+        <div class="alert alert-success alert_message" role="alert">
+          This post has been reacted by {post.reaction} people
+        </div>
       </div>
     </div>
   );
